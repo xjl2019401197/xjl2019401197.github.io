@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     
-    <title>Redis - Hexo</title>
+    <title>Redis - 小e的博客</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis">
 <meta property="og:url" content="http://example.com/2022/03/15/Redis%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="小e的博客">
 <meta property="og:description" content="一、NoSQL数据库简介1.技术发展技术的分类：  解决功能性的问题：Java、Jsp、RDBMS、Tomcat、HTML、Linux、JDBC、SVN 解决扩展性的问题：Struts、Spring、SpringMVC、Hibernate、Mybatis 解决性能的问题：NoSQL、Java线程、Hadoop、Nginx、MQ、ElasticSearch  1.1 Web1.0时代Web1.0的时">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/26255945/1646557516940-f227bf15-c048-4f93-9421-f09297244f24.png#clientId=u610aa8ec-f35c-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u917800ec&margin=%5Bobject%20Object%5D&name=image.png&originHeight=183&originWidth=554&originalType=url&ratio=1&rotation=0&showTitle=false&size=74562&status=done&style=none&taskId=u4b00172d-0725-4170-9002-926dea4edcd&title=">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/26255945/1646557532060-6bcb45da-f2d4-4a6c-9067-19332f8ee85d.png#clientId=u610aa8ec-f35c-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u1dd46de1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=249&originWidth=549&originalType=url&ratio=1&rotation=0&showTitle=false&size=97561&status=done&style=none&taskId=u54d51fef-8fa7-464e-ba0c-854a92dcaf8&title=">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/26255945/1646557587386-b1252c08-f6dc-43f3-b507-475e55cb160f.png#clientId=u610aa8ec-f35c-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ubf2cbf0e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=375&originWidth=557&originalType=url&ratio=1&rotation=0&showTitle=false&size=172421&status=done&style=none&taskId=udeb3129f-5bc8-49da-897a-e959c553c5f&title=">
@@ -164,11 +164,11 @@
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/26255945/1646557516940-f227bf15-c048-4f93-9421-f09297244f24.png#clientId=u610aa8ec-f35c-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u917800ec&margin=%5Bobject%20Object%5D&name=image.png&originHeight=183&originWidth=554&originalType=url&ratio=1&rotation=0&showTitle=false&size=74562&status=done&style=none&taskId=u4b00172d-0725-4170-9002-926dea4edcd&title=">
-    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1647581321682">
+    <link rel="stylesheet" href="/lib/jquery.fancybox.min.css?v=1647581778326">
     
-    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1647581321682">
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1647581321682">
-    <link rel="stylesheet" href="/css/style.css?v=1647581321682">
+    <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css?v=1647581778326">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1647581778326">
+    <link rel="stylesheet" href="/css/style.css?v=1647581778326">
      
     
 <meta name="generator" content="Hexo 5.4.1"></head>
@@ -194,9 +194,9 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>Articles</span>2</div>
-        <div><span>Tags</span>1</div>
-        <div><span>Categories</span>1</div>
+        <div><span>文章</span>2</div>
+        <div><span>标签</span>1</div>
+        <div><span>分类</span>1</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
@@ -228,7 +228,7 @@
     <div class="nexmoe-widget nexmoe-search">
          
             <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
-                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
             </form>
          
     </div>
@@ -248,7 +248,7 @@
     
     
   <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Categories</h3>
+    <h3 class="nexmoe-widget-title">文章分类</h3>
     <div class="nexmoe-widget">
 
       <ul class="category-list">
@@ -1037,8 +1037,8 @@ _**if **(lock) &#123;
   
       
     <div class="nexmoe-post-copyright">
-        <strong>Author：</strong>小e<br>
-        <strong>Link：</strong><a href="http://example.com/2022/03/15/Redis%E7%AC%94%E8%AE%B0/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;03&#x2F;15&#x2F;Redis%E7%AC%94%E8%AE%B0&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;03&#x2F;15&#x2F;Redis%E7%AC%94%E8%AE%B0&#x2F;</a><br>
+        <strong>本文作者：</strong>小e<br>
+        <strong>本文链接：</strong><a href="http://example.com/2022/03/15/Redis%E7%AC%94%E8%AE%B0/" title="http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;03&#x2F;15&#x2F;Redis%E7%AC%94%E8%AE%B0&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2022&#x2F;03&#x2F;15&#x2F;Redis%E7%AC%94%E8%AE%B0&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -1094,7 +1094,7 @@ _**if **(lock) &#123;
         <div class="search-container">
             <div class="search-header">
                 <div class="search-input-container">
-                    <input class="search-input" type="text" placeholder="Search" oninput="sinput();">
+                    <input class="search-input" type="text" placeholder="搜索" oninput="sinput();">
                 </div>
                 <a class="search-close" onclick="sclose();">×</a>
             </div>
@@ -1108,7 +1108,7 @@ _**if **(lock) &#123;
 
  
 
-<script async src="/js/app.js?v=1647581321683"></script>
+<script async src="/js/app.js?v=1647581778327"></script>
 
 
 
