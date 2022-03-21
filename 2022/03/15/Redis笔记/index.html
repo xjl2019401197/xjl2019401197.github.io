@@ -173,7 +173,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_cksn56jaae6.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1647835508666">
+  <link rel="stylesheet" href="/css/style.css?v=1647848780581">
 <meta name="generator" content="Hexo 5.4.1"></head>
 
 <body class="mdui-drawer-body-left">
@@ -724,7 +724,7 @@
 <h3 id="8-4-2-Jedis-API-String"><a href="#8-4-2-Jedis-API-String" class="headerlink" title="8.4.2    Jedis-API:    String"></a>8.4.2    Jedis-API:    String</h3><p>| jedis.<strong>mset</strong>(“str1”,”v1”,”str2”,”v2”,”str3”,”v3”);<br>System.<em>out</em>.println(jedis.<strong>mget</strong>(“str1”,”str2”,”str3”)); |<br>| — |</p>
 <h3 id="8-4-3-Jedis-API-List"><a href="#8-4-3-Jedis-API-List" class="headerlink" title="8.4.3    Jedis-API:    List"></a>8.4.3    Jedis-API:    List</h3><p>| List<String> list = jedis.<strong>lrange</strong>(“mylist”,0,-1);<br>for (String element : list) {<br>System.out.println(element);<br>} |<br>| — |</p>
 <h3 id="8-4-4-Jedis-API-set"><a href="#8-4-4-Jedis-API-set" class="headerlink" title="8.4.4    Jedis-API:    set"></a>8.4.4    Jedis-API:    set</h3><p>| jedis.sadd(“orders”, “order01”);<br>jedis.sadd(“orders”, “order02”);<br>jedis.sadd(“orders”, “order03”);<br>jedis.sadd(“orders”, “order04”);<br>Set<String> smembers = jedis.<strong>smembers</strong>(“orders”);<br>for (String order : smembers) {<br>System.out.println(order);<br>}<br>jedis.<strong>srem</strong>(“orders”, “order02”); |<br>| — |</p>
-<h3 id="8-4-5-Jedis-API-hash"><a href="#8-4-5-Jedis-API-hash" class="headerlink" title="8.4.5  Jedis-API:    hash"></a>8.4.5  Jedis-API:    hash</h3><p>| jedis.<strong>hset</strong>(“hash1”,”userName”,”lisi”);<br>System.out.println(jedis.<strong>hget</strong>(“hash1”,”userName”));<br>Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();<br>map.put(“telphone”,”13810169999”);<br>map.put(“address”,”atguigu”);<br>map.put(“email”,”<a href="mailto:&#97;&#98;&#99;&#64;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#109;">&#97;&#98;&#99;&#64;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#109;</a>“);<br>jedis.<strong>hmset</strong>(“hash2”,map);<br>List<String> result = jedis.<strong>hmget</strong>(“hash2”, “telphone”,”email”);<br>for (String element : result) {<br>System.out.println(element);<br>} |<br>| — |</p>
+<h3 id="8-4-5-Jedis-API-hash"><a href="#8-4-5-Jedis-API-hash" class="headerlink" title="8.4.5  Jedis-API:    hash"></a>8.4.5  Jedis-API:    hash</h3><p>| jedis.<strong>hset</strong>(“hash1”,”userName”,”lisi”);<br>System.out.println(jedis.<strong>hget</strong>(“hash1”,”userName”));<br>Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();<br>map.put(“telphone”,”13810169999”);<br>map.put(“address”,”atguigu”);<br>map.put(“email”,”<a href="mailto:&#x61;&#98;&#99;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;">&#x61;&#98;&#99;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;</a>“);<br>jedis.<strong>hmset</strong>(“hash2”,map);<br>List<String> result = jedis.<strong>hmget</strong>(“hash2”, “telphone”,”email”);<br>for (String element : result) {<br>System.out.println(element);<br>} |<br>| — |</p>
 <h3 id="8-4-6-Jedis-API-zset"><a href="#8-4-6-Jedis-API-zset" class="headerlink" title="8.4.6    Jedis-API:    zset"></a>8.4.6    Jedis-API:    zset</h3><p>| jedis.<strong>zadd</strong>(“zset01”, 100d, “z3”);<br>jedis.zadd(“zset01”, 90d, “l4”);<br>jedis.zadd(“zset01”, 80d, “w5”);<br>jedis.zadd(“zset01”, 70d, “z6”);</p>
 <p>Set<String> zrange = jedis.<strong>zrange</strong>(“zset01”, 0, -1);<br>for (String e : zrange) {<br>System.out.println(e);<br>} |<br>| — |</p>
 <h1 id="9-Redis-Jedis-实例"><a href="#9-Redis-Jedis-实例" class="headerlink" title="9   Redis_Jedis_实例"></a>9   Redis_Jedis_实例</h1><h2 id="9-1-完成一个手机验证码功能"><a href="#9-1-完成一个手机验证码功能" class="headerlink" title="9.1   完成一个手机验证码功能"></a>9.1   完成一个手机验证码功能</h2><p>要求：<br>1、输入手机号，点击发送后随机生成6位数字码，2分钟有效<br>2、输入验证码，点击验证，返回成功或失败<br>3、每个手机号每天只能输入3次<br><img data-fancybox="gallery" data-sizes="auto" data-src="https://cdn.nlark.com/yuque/0/2022/png/26255945/1646985413710-ba687f9f-a420-47f0-9c84-78f8fb78c2b4.png#clientId=u511df20e-4a42-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=206&id=u3ddee873&margin=%5Bobject%20Object%5D&name=image.png&originHeight=258&originWidth=806&originalType=binary&ratio=1&rotation=0&showTitle=false&size=106952&status=done&style=none&taskId=u3e0162bb-d6d5-49e7-af32-1458caf9660&title=&width=644.8" alt="image.png" class="lazyload"></p>
@@ -1841,7 +1841,7 @@ _**if **(lock) &#123;
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1647835508668"></script>
+<script src="/js/app.js?v=1647848780582"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
